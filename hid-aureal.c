@@ -1,14 +1,16 @@
 /*
- *  HID driver for some sunplus "special" devices
+ *  HID driver for Aureal Cy se W-01RN USB_V3.1 devices
  *
+ *  Copyright (c) 2010 Franco Catrin <fcatrin@gmail.com>
+ *  Copyright (c) 2010 Ben Cropley <bcropley@internode.on.net>
+ *
+ *  Based on HID sunplus driver by
  *  Copyright (c) 1999 Andreas Gal
  *  Copyright (c) 2000-2005 Vojtech Pavlik <vojtech@suse.cz>
  *  Copyright (c) 2005 Michael Haboustak <mike-@cinci.rr.com> for Concept2, Inc
  *  Copyright (c) 2006-2007 Jiri Kosina
  *  Copyright (c) 2007 Paul Walmsley
  *  Copyright (c) 2008 Jiri Slaby
- *  Copyright (c) 2010 Franco Catrin <fcatrin@gmail.com>
- *  Copyright (c) 2010 Ben Cropley <bcropley@internode.on.net>
  */
 
 /*
