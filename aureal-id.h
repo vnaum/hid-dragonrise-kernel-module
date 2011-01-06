@@ -10,5 +10,5 @@
  * any later version.
  */
 
-#define USB_VENDOR_ID_AUREAL		0x0755
-#define USB_DEVICE_ID_AUREAL_W01RN	0x2626
+#define USB_VENDOR_ID_AUREAL		0x0079
+#define USB_DEVICE_ID_AUREAL_W01RN	0x0011

@@ -28,6 +28,8 @@
 
 static void aureal_report_fixup(struct hid_device *hdev, __u8 *rdesc, unsigned int rsize)
 {
+	printk(KERN_CRIT "QQ: aureal_report_fixup\n");
+	dev_info(&hdev->dev, "aureal_report_fixup called, rsize == %d\n", rsize);
 	if (rsize >= 54 && rdesc[52] == 0x25 && rdesc[53] == 0x01) {
 		dev_info(&hdev->dev, "fixing Aureal Cy se W-01RN USB_V3.1 "
 				"report descriptor. Keyboard Logical Maximum = 101\n");
@@ -49,6 +51,7 @@ static struct hid_driver aureal_driver = {
 
 static int __init aureal_init(void)
 {
+	printk(KERN_CRIT "QQ: aureal_init\n");
 	return hid_register_driver(&aureal_driver);
 }
 
