@@ -50,6 +50,8 @@ static void aureal_report_fixup(struct hid_device *hdev, __u8 *rdesc, unsigned i
 		rdesc[25] = 0x46;
 		rdesc[26] = 0xFF;
 		rdesc[27] = 0x00;
+
+		rdesc[48] = 0x01; // this is not an axis too
 	}
 }
 
