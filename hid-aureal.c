@@ -28,12 +28,11 @@
 
 static void aureal_report_fixup(struct hid_device *hdev, __u8 *rdesc, unsigned int rsize)
 {
-	printk(KERN_CRIT "QQ: aureal_report_fixup\n");
-	dev_info(&hdev->dev, "aureal_report_fixup called, rsize == %d\n", rsize);
-	if (rsize >= 54 && rdesc[52] == 0x25 && rdesc[53] == 0x01) {
-		dev_info(&hdev->dev, "fixing Aureal Cy se W-01RN USB_V3.1 "
-				"report descriptor. Keyboard Logical Maximum = 101\n");
-		rdesc[53] = 0x65;
+	dev_info(&hdev->dev, "QQ: aureal_report_fixup called, rsize == %d\n", rsize);
+	if (rsize == 101 && rdesc[0x17] == 0x30 && rdesc[0x19] == 0x30 && rdesc[0x1b] == 0x30) {
+		dev_info(&hdev->dev, "fixing DragonRise "
+				"report descriptor. Just 2 axis on this device.\n");
+		rdesc[0x17] = rdesc[0x19] = rdesc[0x1b] = 0;
 	}
 }
 
