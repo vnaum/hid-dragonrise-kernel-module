@@ -28,7 +28,6 @@
 
 static void aureal_report_fixup(struct hid_device *hdev, __u8 *rdesc, unsigned int rsize)
 {
-	dev_info(&hdev->dev, "QQ: aureal_report_fixup called, rsize == %d\n", rsize);
 	if (rsize == 101 && rdesc[0x17] == 0x30 && rdesc[0x19] == 0x30 && rdesc[0x1b] == 0x30) {
 		dev_info(&hdev->dev, "fixing DragonRise "
 				"report descriptor. Just 2 axis on this device.\n");
@@ -69,7 +68,6 @@ static struct hid_driver aureal_driver = {
 
 static int __init aureal_init(void)
 {
-	printk(KERN_CRIT "QQ: aureal_init\n");
 	return hid_register_driver(&aureal_driver);
 }
 
